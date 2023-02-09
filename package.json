@@ -1,0 +1,42 @@
+{
+  "name": "natours",
+  "version": "2.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV_PROD=production nodemon server.js",
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+  },
+  "author": "ariz",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^1.2.6",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.0.1",
+    "hpp": "^0.2.3",
+    "html-to-text": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mapbox-gl": "^2.12.0",
+    "mongoose": "^5.13.15",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.8.0",
+    "parcel-bundler": "^1.12.5",
+    "pug": "^3.0.2",
+    "sharp": "^0.31.3",
+    "slugify": "^1.6.5",
+    "stripe": "^7.63.1",
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
+  }
+}

@@ -26,7 +26,7 @@ mongoose.connect(DB, {
 
 
 
-const port =  3000 || process.env.PORT 
+const port =  3000 || process.env.PORT
 const server = app.listen(port, () => {
     console.log(`App running on port ${port}...`)
 })
@@ -40,5 +40,3 @@ process.on('unhandledRejection', err => {
         process.exit(1)  //0 = success, 1 = uncaught exception
     })
 })
-
-

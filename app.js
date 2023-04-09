@@ -1,10 +1,10 @@
 const path = require('path')
 const express = require('express');
 const morgan = require('morgan');
-const rateLimit = require('express-rate-Limit');
+// const rateLimit = require('express-rate-Limit');
 const helmet = require('helmet')
 const mongoSanitize = require('express-mongo-sanitize')
-const xss = require('xss-clean')
+// const xss = require('xss-clean')
 const hpp = require('hpp')
 const cookieParser = require('cookie-parser')
 const compression = require('compression')
@@ -61,13 +61,13 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 // Limit requests for same IP
-const limiter = rateLimit({
-    // 100 req/hr
-    max: 100,
-    windowMs: 60* 60 * 1000,
-    message: 'Too many requests from this IP, please try again in an hour' 
-})
-app.use('/api',limiter)
+// const limiter = rateLimit({
+//     // 100 req/hr
+//     max: 100,
+//     windowMs: 60* 60 * 1000,
+//     message: 'Too many requests from this IP, please try again in an hour' 
+// })
+// app.use('/api',limiter)
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }))
@@ -78,7 +78,7 @@ app.use(cookieParser())
 app.use(mongoSanitize())   //removes all $ sign from req.body
 
 // Data sanitization agains XSS
-app.use(xss())
+// app.use(xss())
 
 // Prevent parameter pollution
 app.use(hpp({
